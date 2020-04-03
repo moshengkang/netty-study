@@ -1,10 +1,8 @@
 package com.keepstudy.netty.chat;
 
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.codec.http.HttpClientCodec;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpServerCodec;
 import io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler;
@@ -16,7 +14,7 @@ import io.netty.handler.stream.ChunkedWriteHandler;
  * @Version: 1.0
  * @Description: 通道初始化器,用了加载通道处理器（ChannelHandler）
  */
-public class WebScoketChannelInitializer extends ChannelInitializer<SocketChannel> {
+public class WebSocketChannelInitializer extends ChannelInitializer<SocketChannel> {
 
     /**
      * 初始化通道

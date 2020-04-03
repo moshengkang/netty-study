@@ -9,7 +9,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
  * @Author: moshengkang
  * @e-mial: 1634414600@qq.com
  * @Version: 1.0
- * @Description: netty服务器
+ * @Description: netty服务器(主从多线程模型)
  */
 public class WebSocketNettyServer {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class WebSocketNettyServer {
                     //指定netty通道类型
                     .channel(NioServerSocketChannel.class)
                     //指定通道初始化器用来加载Channel收到事件后，如何进行业务处理
-                    .childHandler(new WebScoketChannelInitializer());
+                    .childHandler(new WebSocketChannelInitializer());
 
             //绑定服务器端口，已同步的方式启动服务器
             ChannelFuture future = serverBootstrap.bind(9090).sync();
