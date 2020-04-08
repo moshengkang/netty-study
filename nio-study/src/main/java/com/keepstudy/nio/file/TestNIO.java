@@ -72,7 +72,7 @@ public class TestNIO {
         FileChannel outputStreamChannel = fileOutputStream.getChannel();
 
         //3.复制
-        //模式一：从数据源文件中读取
+        //模式一：目标文件从数据源文件中读取
         outputStreamChannel.transferFrom(inputStreamChannel,0,inputStreamChannel.size());
         //outputStreamChannel.transferFrom(inputStreamChannel,0,file.length());
         //模式二：数据源文件写到目标文件中
