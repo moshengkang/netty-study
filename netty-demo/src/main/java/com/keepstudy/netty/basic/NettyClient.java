@@ -30,7 +30,7 @@ public class NettyClient {
                     socketChannel.pipeline().addLast(new NettyClientHandler());
                 }
             });
-        System.out.println("...... client is ready");
+        System.out.println("...... client is ready ......");
 
         //7.启动客户端去连接服务器 connect方法是异步的，sync()方法是同步阻塞的
         ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 9999).sync();
