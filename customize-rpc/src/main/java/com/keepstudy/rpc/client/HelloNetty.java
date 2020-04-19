@@ -1,0 +1,11 @@
+package com.keepstudy.rpc.client;
+
+/**
+ * @Author: moshengkang
+ * @e-mial: 1634414600@qq.com
+ * @Version: 1.0
+ * @Description: java类作用描述
+ */
+public interface HelloNetty {
+    String sayHello();
+}
